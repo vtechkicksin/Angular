@@ -11,7 +11,7 @@ img{
     width: 20rem;
 }
 .card-img{
-    height: 30rem;
+    height: 22rem;
     width: 20rem;
     border: 1px solid whitesmoke;
     margin: 0.5rem;
@@ -26,7 +26,7 @@ img{
     cursor: pointer;
 }
 .content{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     padding: .5rem 1rem;
     position: relative;
     .favorite{
@@ -42,5 +42,24 @@ img{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .origins{
+            flex:9;
+        }
+        .origins span{
+            border-radius: 2rem;
+            background-color: whitesmoke;
+            color: gray;
+            font-size: .8rem;
+            margin-right: .3rem;
+            display: inline-block;
+        }
+        .cook-time{
+            background-color: aqua;
+            font-size: .8rem;
+            flex:3;
+            text-align: right;
+        }
     }
+
+    
 }
