@@ -19,7 +19,6 @@ img{
     flex-direction: column;
     overflow: hidden;
     color: #e72929;
-    
 }
 .card-img:hover{
     opacity: 0.9;
@@ -54,7 +53,7 @@ img{
             display: inline-block;
         }
         .cook-time{
-            background-color: aqua;
+            /* background-color: aqua; */
             font-size: .8rem;
             flex:3;
             text-align: right;

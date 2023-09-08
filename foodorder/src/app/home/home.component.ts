@@ -10,9 +10,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent {
   foods:Foods[] = [];
-  constructor(private fs : FoodService,private router : ActivatedRoute){ }
+  constructor(private fs : FoodService,private route : ActivatedRoute){ }
   
   ngOnInit(){
-    this.foods = this.fs.getall();
+    this.route.params.subscribe(params => {
+      if(params['searchItem']) {
+        this.foods = this.fs.getall().filter(food=>food.name.toLocaleLowerCase().includes(params['searchItem'].toLocaleLowerCase()))
+      } else {
+        this.foods = this.fs.getall();
+      }
+    })
+    
   }
 }
