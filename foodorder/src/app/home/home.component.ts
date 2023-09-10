@@ -16,7 +16,10 @@ export class HomeComponent {
     this.route.params.subscribe(params => {
       if(params['searchItem']) {
         this.foods = this.fs.getall().filter(food=>food.name.toLocaleLowerCase().includes(params['searchItem'].toLocaleLowerCase()))
-      } else {
+      } else if(params['tag']) {
+        this.foods = this.fs.getAllFoodByTag(params['tag'])
+      }
+      else {
         this.foods = this.fs.getall();
       }
     })
