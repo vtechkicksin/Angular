@@ -12,6 +12,6 @@ export class TagsComponent {
 
   constructor(private fs:FoodService) { }
   ngOnInit():void {
-
+    this.tags = this.fs.getAllTag();
   }
 }

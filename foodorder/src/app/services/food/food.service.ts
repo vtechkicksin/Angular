@@ -15,7 +15,7 @@ export class FoodService {
       return this.getall().filter(food=>food.tags?.includes(tag));
     }
   }
-  getAllTage():Tag[]{
+  getAllTag():Tag[]{
     return [
       {name:'All',count:14},
       {name:'FastFood',count:4},
@@ -25,7 +25,6 @@ export class FoodService {
       {name:'Hamburger',count:1},
       {name:'Fry',count:1},
       {name:'Soup',count:1},
-
     ]
   }
   getall():Foods[]{
@@ -37,7 +36,7 @@ export class FoodService {
         cookTime:'10-15',
         favorite: true,
         star:4.0,
-        tags:['fastfood','pizza','lunch'],
+        tags:['FastFood','pizza','Lunch'],
         imageUrl:'/assets/food-1.jpg',
         origins:['italian','nepali','chinese'],
       },
@@ -48,7 +47,7 @@ export class FoodService {
         cookTime:'5-15',
         favorite: false,
         star:3.0,
-        tags:['sabzi','bhaji','lunch'],
+        tags:['sabzi','FastFood','Lunch'],
         imageUrl:'/assets/food-2.jpg',
         origins:['italian','rajasthan','haryana'],
       },
@@ -59,7 +58,7 @@ export class FoodService {
         cookTime:'25-35',
         favorite: true,
         star:2.0,
-        tags:['tortia','roti','bread'],
+        tags:['SlowFood','roti','bread'],
         imageUrl:'/assets/food-3.jpg',
         origins:['indian','bihar','up'],
       },
@@ -70,7 +69,7 @@ export class FoodService {
         cookTime:'25-35',
         favorite: true,
         star:5.0,
-        tags:['tortia','roti','bread'],
+        tags:['SlowFood','roti','bread'],
         imageUrl:'/assets/food-4.jpg',
         origins:['indian','USA','UK'],
       },
@@ -81,7 +80,7 @@ export class FoodService {
         cookTime:'25-35',
         favorite: false,
         star:1.0,
-        tags:['tortia','roti','bread'],
+        tags:['tortia','FastFood','Lunch'],
         imageUrl:'/assets/food-5.jpg',
         origins:['indian','BLR','Rajnikant'],
       },
@@ -92,7 +91,7 @@ export class FoodService {
         cookTime:'25-35',
         favorite: true,
         star:5.0,
-        tags:['tortia','roti','bread'],
+        tags:['tortia','FastFood','bread'],
         imageUrl:'/assets/food-6.jpg',
         origins:['indian','PAK','AUS'],
       },
@@ -103,7 +102,7 @@ export class FoodService {
         cookTime:'25-35',
         favorite: true,
         star:3.0,
-        tags:['tortia','roti','bread'],
+        tags:['Hamburger','Fry','bread'],
         imageUrl:'/assets/food-7.jpg',
         origins:['indian','ZOmato','Swiggy'],
       },
@@ -114,9 +113,9 @@ export class FoodService {
         cookTime:'25-35',
         favorite: false,
         star:5.0,
-        tags:['tortia','roti','bread'],
+        tags:['tortia','roti','Pizza'],
         imageUrl:'/assets/food-8.jpg',
-        origins:['indian','food','panda'],
+        origins:['indian','Soup','panda'],
       },
     ];
   }
