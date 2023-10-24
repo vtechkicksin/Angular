@@ -8,7 +8,7 @@ export class FoodService {
 
   constructor() { }
 
-  getAllFoodByTag(tag:string) : Foods[]{
+  getAllFoodByTag(tag:string) : Foods[] {
     if(tag=='All') {
       return this.getall();
     } else {
